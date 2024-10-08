@@ -24,3 +24,32 @@
     padding: 0 20px;
 
 }
+header{padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo i{
+    height: 45px;
+    width: 45px;
+    background-color: rgb(187, 28, 28);
+    border-radius: 50%;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+#logo-name{
+    font-size: 30px;
+    font-weight: 400;
+    color: aliceblue;
+}
