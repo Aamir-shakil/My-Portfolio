@@ -97,6 +97,7 @@ nav .nav-bar li a{
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
+    display: inline-block;
     
 }
 
