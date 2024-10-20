@@ -89,3 +89,36 @@ nav .nav-bar li a{
     margin-right: 2.5rem;
     font-size: 25px;
 }
+
+h4 .wave{
+    animation: waving-hand 2.5s infinite;
+    transform-origin: 70% 70%;
+    
+}
+
+@keyframes waving-hand {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(10deg);
+    }
+    20%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    40%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(8deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
