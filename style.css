@@ -188,6 +188,17 @@ nav .nav-bar li a{
     margin-right: 7px;
 }
 
+.hero-text .social i{
+    color: aliceblue;
+    font-size: 22px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+.hero-text .social i:hover{
+    color: rgb(187, 28, 28);
+    transform: rotate(360deg) scale(1.2);
+    
+}
 /*Displaying nav bar for small screen*/
 @media(max-width:930px)
 {
@@ -241,4 +252,14 @@ nav .nav-bar li a{
         right: 0;
     }
 
+}
+@media(max-width:768px)
+{
+    .container{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .hero-text{
+        padding: 40px 0px;
+    }
 }
