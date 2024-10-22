@@ -228,5 +228,17 @@ nav .nav-bar li a{
         transition: 0.5s;
         padding: 25px 0px;
     }
+    nav .nav-bar li{
+        display: block;
+        
+    }
+    nav .nav-bar li a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    nav .nav-bar.open{
+        right: 0;
+    }
 
 }
