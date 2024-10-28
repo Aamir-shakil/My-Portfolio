@@ -229,7 +229,7 @@ nav .nav-bar li a{
     nav .nav-bar{
         position: absolute;
         top: 110px;
-        right: 0;
+        right: -100%;
         bottom: 0;
         width: 60%;
         height: 100vh;
