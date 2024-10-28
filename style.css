@@ -8,7 +8,7 @@
 
 html *{
     color: aliceblue;
-    /* setting default font colour to save lines of code 
+     /*setting default font colour to save lines of code */
 }
 
  body{
@@ -58,24 +58,27 @@ header{padding: 40px 0 30px;
 }
 
 nav .togglebtn{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     position: absolute;
-    top: 45px;
-    right: 3%;
+    top: 20px;
+    right: 20px;
     z-index: 5;
     cursor: pointer;
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     
 } /*to open up and see the navbar*/
 
 nav .togglebtn span{
     display: block;
     background-color: rgb(187, 28, 28) ;
-    margin: 5px 0px;
     width: 100px;
     height: 3px;
     transition: 0.4s;
+    border-radius: 5px;
     transition-property: transform, opacity;
 
 }
@@ -203,7 +206,7 @@ nav .nav-bar li a{
 @media(max-width:930px)
 {
     nav .togglebtn{
-        display: initial;
+        display: flex;
     }
 
     .click{
@@ -237,16 +240,20 @@ nav .nav-bar li a{
         z-index: 3;
         box-shadow: 5px 13px 30 px rgba(0, 0, 0, 0.1);
         transition: 0.5s;
-        padding: 25px 0px;
+        padding: 20px 0px;
+        display: block;
     }
     nav .nav-bar li{
         display: block;
+        text-align: center;
+        margin: 10px 0;
         
     }
     nav .nav-bar li a{
         display: block;
         margin-bottom: 15px;
         text-align: center;
+        padding: 10px;
     }
     nav .nav-bar.open{
         right: 0;
