@@ -58,11 +58,11 @@ header{padding: 40px 0 30px;
 }
 
 nav .togglebtn{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 24px;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 15px;
     z-index: 5;
     cursor: pointer;
     display: none;
@@ -219,15 +219,17 @@ nav .nav-bar li a{
     }
 
     .click span:first-child{
-        transform: rotate(-45deg);
+        transform: rotate(-45deg) translate(3px, 3px);
+        width: 95%;
     }
     .click span:nth-child(2){
         opacity: 0;
         margin: 0;
     }
     .click span:last-child{
-        transform: rotate(45deg);
+        transform: rotate(45deg) translate(3px, -3px);
         top: 0;
+        width: 95%;
     }
     nav .nav-bar{
         position: absolute;
