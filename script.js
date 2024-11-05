@@ -15,3 +15,18 @@ var typed=new Typed(".input",{
     backSpeed:55,
     loop:true
 })
+
+// Intersection Observer to animate elements when they scroll into view
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show'); // Optional: Remove to re-trigger animation
+        }
+    });
+}, { threshold: 0.1 }); // Adjust threshold as needed
+
+// Select all elements with the 'hidden' class and observe them
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
