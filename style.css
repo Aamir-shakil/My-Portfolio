@@ -242,7 +242,7 @@ nav .nav-bar li a{
         height: 100vh;
         background-color: #222;
         z-index: 3;
-        box-shadow: 5px 13px 30 px rgba(0, 0, 0, 0.1);
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
         transition: 0.5s;
         padding: 20px 0px;
         display: block;
@@ -277,8 +277,11 @@ nav .nav-bar li a{
 
 /* about section styling  */
 .about-section {
+    display: flex;
     padding: 60px 20px;
     text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .about-section h2 {
@@ -299,10 +302,13 @@ nav .nav-bar li a{
     transition: all 1s ease-in-out;
     background-position: center center;
     box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
-    width: 20%; /* Ensures the image fills the container */
+    width: 18%; /* Ensures the image fills the container */
     height: auto; /* Maintains aspect ratio */
     object-fit: cover; /* Ensures the image adjusts to container’s shape */
+    border-radius: 50%;
+    margin-right: 40px;
 }
+
 
 @keyframes blob{
     0%{
@@ -331,3 +337,67 @@ nav .nav-bar li a{
     transform: translateX(0); /* Slides to original position */
 }
 
+/* Hobbies section styling  */
+.hobbies-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.hobbies-section h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(187, 28, 28);
+    text-align: center;
+}
+
+.hobby-card {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.hobby-card h3 {
+    top: 10px;
+}
+.hobby-card h3, .hobby-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+.hobby-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+.hobby-card:hover .hobby-image {
+    opacity: 0.3; /* Fade image slightly on hover */
+}
+
+.hobby-text {
+    bottom: 10px;
+    opacity: 0;
+}
+
+.hobby-card:hover {
+    transform: scale(1.05);
+}
+
+.hobby-card:hover .hobby-text {
+    opacity: 1;
+}
