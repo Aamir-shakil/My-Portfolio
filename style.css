@@ -294,6 +294,30 @@ nav .nav-bar li a{
     line-height: 1.6;
     color: aliceblue;
 }
+.blob-pic{
+    animation: blob 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+    background-position: center center;
+    box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
+    width: 20%; /* Ensures the image fills the container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image adjusts to container’s shape */
+}
+
+@keyframes blob{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+}
+
+
 
 /* sliding animation of content */
 .hidden {
@@ -306,3 +330,4 @@ nav .nav-bar li a{
     opacity: 1;
     transform: translateX(0); /* Slides to original position */
 }
+
