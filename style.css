@@ -15,6 +15,8 @@ html *{
  body{
     overflow-x:hidden; /*prevent horizontal scrolling*/
     background-color: rgb(34, 34, 34);
+    margin: 0;
+    padding: 0;
  }
 
  .hero-header{
@@ -25,7 +27,7 @@ html *{
  }
 
 .wrapper{
-    width: 1280px;
+    width: 2000px;
     max-width: 95%;
     margin: 0 auto;
     padding: 0 20px;
@@ -262,10 +264,6 @@ nav .nav-bar li a{
     nav .nav-bar.open{
         right: 0;
     }
-
-}
-@media(max-width:768px)
-{
     .container{
         flex-direction: column;
         padding-top: 2rem;
@@ -273,18 +271,22 @@ nav .nav-bar li a{
     .hero-text{
         padding: 40px 0px;
     }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* about section styling  */
 .about-section {
     display: flex;
-    padding: 60px 20px;
+    padding: 30px;
     text-align: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.about-section h2 {
+h2 {
     font-size: 2em;
     margin-bottom: 20px;
     color: rgb(187, 28, 28);
@@ -337,67 +339,52 @@ nav .nav-bar li a{
     transform: translateX(0); /* Slides to original position */
 }
 
-/* Hobbies section styling  */
-.hobbies-section {
+.hobbies{
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+}
+.cards{
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 40px 0;
+    align-items: center;
 }
 
-.hobbies-section h2{
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: rgb(187, 28, 28);
-    text-align: center;
-}
-
-.hobby-card {
-    position: relative;
-    width: 200px;
-    height: 150px;
-    border-radius: 8px;
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 20px;
     padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-    overflow: hidden;
-    color: #fff;
-    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition: all .3s eaase;
+}
+.content > *{
+    flex: 1 1 100%;
+}
+.content h4{
+    font-size: 30px;
+    margin: 16px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+.content h3{
+    font-size: 40px;
+    margin: 16px 0;
 }
 
-
-.hobby-card h3 {
-    top: 10px;
-}
-.hobby-card h3, .hobby-text {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    color: #fff;
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
-}
-.hobby-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s ease-in-out;
-}
-.hobby-card:hover .hobby-image {
-    opacity: 0.3; /* Fade image slightly on hover */
+.content p{
+    font-size: 17px;
 }
 
-.hobby-text {
-    bottom: 10px;
-    opacity: 0;
+.content-1:hover{
+    border-color: #1da1f2;
+    background: #1da1f2;
 }
 
-.hobby-card:hover {
-    transform: scale(1.05);
-}
-
-.hobby-card:hover .hobby-text {
-    opacity: 1;
+.content-2:hover{
+    border-color: rgb(187, 28, 28);
+    background: rgb(187, 28, 28);
 }
