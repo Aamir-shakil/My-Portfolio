@@ -276,6 +276,16 @@ nav .nav-bar li a{
         flex-direction: column;
     }
 }
+@media screen and (min-width: 1120px) {
+    .projects_container{
+        height: 100vh;
+    }
+
+    .projects_card{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
 
 /* about section styling  */
 .about-section {
@@ -404,9 +414,9 @@ h2 {
     overflow: hidden;
 }
 .card_img{
-    width: 370px;
+    width: 420px;
     border-radius: 1.5rem;
-    height: 190px;
+    height: 240px;
 }
 .card_data{
     width: 280px;
@@ -449,11 +459,18 @@ h2 {
     animation: remove-overflow 2s forwards;
 } 
 
+
 @keyframes show-data{
     50%{
         transform: translateY(-10rem);
     }
     100%{
-        transform: translateY(-9rem);
+        transform: translateY(-7rem);
     }
 }
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+
