@@ -388,3 +388,72 @@ h2 {
     border-color: rgb(187, 28, 28);
     background: rgb(187, 28, 28);
 }
+
+.projects_container{
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+.projects_card{
+    display: grid;
+    row-gap: 3.5rem;
+}
+.card_article{
+    position: relative;
+    overflow: hidden;
+}
+.card_img{
+    width: 370px;
+    border-radius: 1.5rem;
+    height: 190px;
+}
+.card_data{
+    width: 280px;
+    background-color: rgb(187, 28, 28);
+    padding: 1,5rem 2rem;
+    box-shadow: 0 8px 24px rgb(65, 64, 64);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+.card_description{
+    display: block;
+    font-size: small;
+    margin-bottom: .25rem;
+
+}
+.card_title{
+    font-weight: 500;
+    margin-bottom: .75rem;
+}
+.card_button{
+    text-decoration: none;
+    font-size: x-small
+}
+.card_button:hover{
+    text-decoration: underline;
+}
+.card_article:hover .card_data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+
+}
+.card_article:hover{
+    animation: remove-overflow 2s forwards;
+} 
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-9rem);
+    }
+}
