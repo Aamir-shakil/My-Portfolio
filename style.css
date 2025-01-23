@@ -275,6 +275,13 @@ nav .nav-bar li a{
         display: flex;
         flex-direction: column;
     }
+    .contact_inputs{
+        width: 80vw;
+
+    }
+    .contact_right{
+        display: none;
+    }
 }
 @media screen and (min-width: 1120px) {
     .projects_container{
